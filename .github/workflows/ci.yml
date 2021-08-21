@@ -35,16 +35,19 @@ jobs:
           hugo_0.15_linux_amd64/hugo_0.15_linux_amd64
 
       # Create a repo inside public and make a commit
-      - name: Publish to GitHub Pages
+      - name: Git Init
         run: |
           cd "$PUB_DIR"
-          git init -b main
+          git init -b gh-pages
           git config user.name "GitHub Actions"
           git config user.email "<>"
           git add .
           git commit -m "Deploy to GitHub Pages"
 
       # force-push everything to the gh-pages branch
-      - name: Publish to GitHub Pages
+      - name: Git Push
         run: |
-          git push --force --quiet "https://${{ secrets.GITHUB_TOKEN }}:${{ secrets.GITHUB_TOKEN }}@github.com/wmhilton/solidmecha.com.git" main:gh-pages
+          AUTH=$(git config --local --get 'http.https://github.com/.extraheader')
+          cd "$PUB_DIR"
+          git config --local 'http.https://github.com/.extraheader' "$AUTH"
+          git push --force --quiet "https://github.com/wmhilton/solidmecha.com"
