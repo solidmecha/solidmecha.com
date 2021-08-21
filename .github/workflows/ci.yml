@@ -48,4 +48,4 @@ jobs:
       - name: Git Push
         run: |
           cd "$PUB_DIR"
-          git push --force --quiet "https://${{ secrets.GITHUB_TOKEN }}:x-oauth-basic@github.com/${{ github.repository }}" gh-pages:gh-pages
+          git push --force --quiet "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}" gh-pages:gh-pages
