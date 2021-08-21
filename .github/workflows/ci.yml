@@ -38,10 +38,9 @@ jobs:
       - name: Publish to GitHub Pages
         run: |
           cd "$PUB_DIR"
-          git init
+          git init -b main
           git config user.name "GitHub Actions"
           git config user.email "<>"
           git add .
           git commit -m "Deploy to GitHub Pages"
-          git 
-          git push --force --quiet "https://${{ secrets.GITHUB_TOKEN }}@github.com/wmhilton/solidmecha.com.git" master:gh-pages
+          git push --force --quiet "https://${{ secrets.GITHUB_TOKEN }}@github.com/wmhilton/solidmecha.com.git" main:gh-pages
