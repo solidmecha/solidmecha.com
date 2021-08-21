@@ -47,7 +47,5 @@ jobs:
       # force-push everything to the gh-pages branch
       - name: Git Push
         run: |
-          AUTH=$(git config --local --get 'http.https://github.com/.extraheader')
           cd "$PUB_DIR"
-          git config --local 'http.https://github.com/.extraheader' "$AUTH"
-          git push --force --quiet "https://github.com/${{ github.repository }}" gh-pages:gh-pages
+          git push --force --quiet "https://${{ secrets.GITHUB_TOKEN }}:x-access-token@github.com/${{ github.repository }}" gh-pages:gh-pages
