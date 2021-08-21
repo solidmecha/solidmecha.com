@@ -50,4 +50,4 @@ jobs:
           AUTH=$(git config --local --get 'http.https://github.com/.extraheader')
           cd "$PUB_DIR"
           git config --local 'http.https://github.com/.extraheader' "$AUTH"
-          git push --force --quiet "https://github.com/wmhilton/solidmecha.com"
+          git push --force --quiet "https://github.com/wmhilton/solidmecha.com" gh-pages:gh-pages
