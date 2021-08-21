@@ -34,7 +34,7 @@ jobs:
         run: |
           hugo_0.15_linux_amd64/hugo_0.15_linux_amd64
 
-      # Create a repo inside public and force-push everything to the gh-pages branch
+      # Create a repo inside public and make a commit
       - name: Publish to GitHub Pages
         run: |
           cd "$PUB_DIR"
@@ -43,4 +43,8 @@ jobs:
           git config user.email "<>"
           git add .
           git commit -m "Deploy to GitHub Pages"
-          git push --force --quiet "https://${{ secrets.GITHUB_TOKEN }}@github.com/wmhilton/solidmecha.com.git" main:gh-pages
+
+      # force-push everything to the gh-pages branch
+      - name: Publish to GitHub Pages
+        run: |
+          git push --force --quiet "https://${{ secrets.GITHUB_TOKEN }}:${{ secrets.GITHUB_TOKEN }}@github.com/wmhilton/solidmecha.com.git" main:gh-pages
