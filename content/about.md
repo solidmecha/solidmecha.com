@@ -3,4 +3,4 @@ title = "About"
 type = "page"
 +++
 
-Thanks to Will and Joe! without you guys this site and these games wouldn't be possible.
+Thanks to Billie and Joe! without you wonderful people this site and these games wouldn't be possible.
