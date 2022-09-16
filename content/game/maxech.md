@@ -5,4 +5,4 @@ type = "game"
 gamefile = "maxech"
 +++
 
-Pre-alpha Mech ARPG. Left-click to move, right-click Fire1, Q fire2, W dash, E shields  
+Pre-alpha Mech ARPG. 'WASD' to move, 'left and right mouse buttons' to fire, 'Space' for dash, 'E' for shields, 'Q' for dash and shields  
