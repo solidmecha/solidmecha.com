@@ -5,4 +5,4 @@ type = "game"
 gamefile = "CubeX"
 +++
 
-Puzzle cube with a...twist.
+Puzzle cube with a...twist. Click and drag to rotate cube, buttons for moves.

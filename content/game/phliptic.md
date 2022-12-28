@@ -5,4 +5,4 @@ type = "game"
 gamefile = "phliptic"
 +++
 
-Drag and drop pieces onto the board.
+Drag and drop pieces onto the board. Push and Plus Specials will effect controlled pieces. 
